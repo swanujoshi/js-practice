@@ -64,7 +64,7 @@ user[1].email
 // console.log(Object.hasOwn('isLoggedIn'));
 
 
-// Assigning the single varible to access object so it helps in multiple accessing case.
+// Assigning the single varible to access object so it helps in multiple accessing case.( object destructuring)
 
 const course = {
     coursename: "js in hindi",
