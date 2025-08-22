@@ -1,0 +1,38 @@
+// JavaScript for...in Loop
+
+// Purpose: Iterates over the enumerable property names (keys) of an object.
+// Use Cases: Best for looping through object properties (not recommended for arrays if order matters).
+
+Syntax :
+for (let key in object) {
+  // code using object[key]
+}
+
+Example :
+const person = { fname: "John", age: 30 };
+for (let key in person) {
+  console.log(key, person[key]); // logs each property and value
+}
+
+
+// JavaScript for...of Loop
+
+// Purpose: Iterates over the values of an iterable object (like arrays, strings, maps, sets, etc.).
+// Use Cases: Best for looping over array elements, strings, maps, or any other iterable where you want values—not keys.
+
+
+syntax: 
+for (let value of iterable) {
+  // code using value
+}
+
+Example:
+let arr = [10, 20, 30];
+for (let num of arr) {
+  console.log(num); // logs 10, then 20, then 30
+}
+//string
+let text = "abc";
+for (let char of text) {
+  console.log(char); // logs "a", then "b", then "c"
+}
