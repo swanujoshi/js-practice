@@ -1,0 +1,12 @@
+1) Call Stack: This is where JavaScript runs functions one by one. Only one thing happens at a time.
+2) Web APIs: When JavaScript needs to do something that will take time (like setTimeout or fetch), it gives the job to the      browser (Web API) to handle.
+3) Task Queue: Once the browser finishes those jobs, it puts the results (callback functions) into a waiting line, called the Task Queue.
+4) Event Loop: The Event Loop looks at the Call Stack and Task Queue. If the Call Stack is empty, it takes the next job from the Task Queue and puts it on the Stack to run.
+
+
+
+* Step-by-Step Flow
+1) A function runs—it's put on the Call Stack.
+2) If there’s something like setTimeout, JavaScript lets the browser handle it and continues with the next thing.
+3) When the browser is done, it puts the result into the Task Queue.
+4) Once all functions in the Call Stack are done, the Event Loop pushes the next waiting job from the Task Queue onto the Stack to run it.
