@@ -14,16 +14,35 @@
 </body>
 <script>
   const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
-  const xhr = new XMLHttpRequest();
-  xhr.open('GET' , requestUrl)
-  xhr.onreadystatechange = function(){
-    if(xhr.readyState === 4 ){
-        const data = JSON.parse(this.responseText)
-        console.log(typeof data);
-        console.log(data.followers);
-        console.log(data.avatar_url);        
-    }
-  }
-  xhr.send();
+const xhr = new XMLHttpRequest(); 
+
+// Step 1: Initialize
+xhr.open('GET', requestUrl);  
+
+// Step 2: Listen for readyState changes
+xhr.onreadystatechange = function(){
+   if(xhr.readyState === 4){  
+       // Convert JSON string into JS object
+       const data = JSON.parse(this.responseText);
+
+       // Debug outputs
+       console.log(typeof data);      // 'object'
+       console.log(data.followers);   // Shows number of followers
+       console.log(data.avatar_url);  // Shows user’s avatar image link
+   }
+}
+
+// Step 3: Send request
+xhr.send();
 </script>
 </html>
+
+<!-- 
+ Concepts Used
+AJAX (Asynchronous JavaScript and XML): Technique to fetch data from a server without reloading the page.
+
+XMLHttpRequest: An older but widely supported API for AJAX. 
+
+
+This program demonstrates how to make a GET request to GitHub’s API using XMLHttpRequest, handle states via onreadystatechange, parse the returned JSON response, and access specific properties (followers count, avatar link).
+-->
