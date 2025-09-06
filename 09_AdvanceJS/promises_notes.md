@@ -1,4 +1,4 @@
-1) What is a Promise?
+## 1) What is a Promise?
 A Promise is an object representing the eventual completion (or failure) of an asynchronous operation.
 
 A Promise can be in three states:
@@ -7,7 +7,7 @@ Fulfilled (Resolved): Operation completed successfully → resolve().
 Rejected: Operation failed → reject().
 
 
-2) Creating a Promise
+## 2) Creating a Promise
 const promiseOne = new Promise(function(resolve, reject){
   // Asynchronous task
   setTimeout(function(){
@@ -20,7 +20,7 @@ The executor function takes two arguments:
 resolve() → called when the task is successful.
 reject() → called when the task fails.
 
-3) Consuming a Promise
+## 3) Consuming a Promise
 promiseOne.then(function(){
    console.log('Promise Consumed');
 });
@@ -28,7 +28,7 @@ promiseOne.then(function(){
 .then() runs when the promise is resolved.
 Promises allow chaining multiple .then() blocks.
 
-4) Promise Example with Data
+## 4) Promise Example with Data
 const promiseThree = new Promise((resolve, reject) => {
   setTimeout(() => {
     resolve({ username: "Swanand", email: "swanand@gmail.com" });
@@ -41,7 +41,7 @@ promiseThree.then(user => {
 
 Here, the promise returns an object, which is received inside .then().
 
-5) Error Handling in Promises
+## 5) Error Handling in Promises
 const promiseFour = new Promise((resolve, reject) => {
   setTimeout(() => {
     let error = true;
@@ -69,7 +69,7 @@ promiseFour
 .catch() handles errors (if promise is rejected).
 .finally() always runs, regardless of success or failure (cleanup).
 
-6) Async/Await (Cleaner Syntax)
+## 6) Async/Await (Cleaner Syntax)
 const promiseFive = new Promise((resolve, reject) => {
   setTimeout(() => {
     let error = true;
@@ -95,7 +95,7 @@ consumePromiseFive();
 async functions make asynchronous code look synchronous.
 await pauses execution until the promise settles.
 
-7) Fetch API
+## 7) Fetch API
 
 fetch('https://api.github.com/users/hiteshchoudhary')
   .then(response => {
